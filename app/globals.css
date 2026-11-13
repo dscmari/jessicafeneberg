@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-marine-blue: #062A4B;
+  --color-turquoise: #0CA9B9;
+  --color-darkturquoise: #087F91;
+  --color-off-white: #F7FAFB;
+  --color-cta: #3730a3;
+  /* --color-darkmodeblue: #102a43; */
+  --font-inter: var(--font-inter);
+  --font-geistsans: var(--font-geist-sans);
+  --font-geistmono: var(--font-geist-mono);
+  --breakpoint-3xl: 120rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
+  background-color: var(--color-off-white);
+  min-width: 320px;
+  min-height: 100vh;
+  max-width: 2048px;
+  margin: 0 auto 0 auto;
 }
+
+h1 {
+  font-family: var(--font-inter), serif;
+  font-size: 2rem; /* 40px */
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: var(--font-inter), serif;
+  font-size: 1.5rem; /* 24px */
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: var(--font-inter), serif;
+  font-size: 1rem; /* 24px */
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.25; /* Leicht angepasster Zeilenabstand für bessere Lesbarkeit auf Mobile */
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-darkturquoise);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.burgermenu {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin: 1rem;
+  margin-right: 0;
+  cursor: pointer;
+  /* Textfarbe setzen – wird via fill="currentColor" an das SVG weitergegeben */
+  color: var(--color-darkturquoise);
+}
+
+.burgermenu svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Grundstyling aller drei Striche (rect) */
+.burgermenu rect {
+  transition: all 0.5s ease-in-out;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* --- OFFENER ZUSTAND (Animation zum X) --- */
+
+/* 1. Oberer Strich (.top) */
+.burgermenu.open .top {
+  transform: translateY(10px) rotate(135deg);
+}
+
+/* 2. Mittlerer Strich (.middle) */
+.burgermenu.open .middle {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+/* 3. Unterer Strich (.bottom) */
+.burgermenu.open .bottom {
+  transform: translateY(-10px) rotate(-135deg);
+}
+
+/* h1,
+h2,
+h3,
+p,
+span {
+  color: var(--color-stone);
+} */
