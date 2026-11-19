@@ -31,7 +31,7 @@ export default function DesktopNavbar({ className }: Props) {
      
           <div className="flex gap-4 xl:gap-8 2xl:gap-16">
                    <Link
-              className={`nav-link ${pathname === "/" ? "active" : ""}`}
+              className={`nav-link ${pathname === "/" ? "active font-semibold" : ""}`}
               href={"/"}
             >
               Start

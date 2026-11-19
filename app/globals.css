@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
-
 @theme {
-  --color-marine-blue: #062A4B;
-  --color-turquoise: #0CA9B9;
-  --color-darkturquoise: #087F91;
-  --color-off-white: #F7FAFB;
+  --color-marine-blue: #062a4b;
+  --color-turquoise: #0ca9b9;
+  --color-darkturquoise: #087f91;
+  --color-off-white: #f7fafb;
+  --color-ice-blue: #dceef2;
   --color-cta: #3730a3;
   /* --color-darkmodeblue: #102a43; */
   --font-inter: var(--font-inter);
@@ -75,7 +75,8 @@ h3 {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--color-darkturquoise);
+  background-color: var(--color-turquoise);
+  opacity: 0.5;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
