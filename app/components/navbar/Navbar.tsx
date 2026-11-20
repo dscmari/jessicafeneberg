@@ -89,7 +89,7 @@ export default function Navbar({ className }: Props) {
         </div>
         {showMenu ? (
           <div>
-            {/* <div
+             {/* <div
               className={`flex items-center gap-4 pt-12 ${
                 isSelected
                   ? ""
@@ -105,7 +105,7 @@ export default function Navbar({ className }: Props) {
                   isSelected ? "scale-y-[-1]" : ""
                 }`}
               />
-            </div> */}
+            </div>  */}
 
             <motion.div
               initial={{ opacity: 0, y: -30 }}

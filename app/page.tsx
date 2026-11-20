@@ -13,25 +13,34 @@ export default function Home() {
   return (
     <div className="">
       <HeroHome />
-      <section className="overflow-hidden">
-        <div className="bg-ice-blue/50">
-          <article className="grid grid-cols-3 p-8 xl:p-12 max-w-7xl mx-auto">
-            <div className="px-8 relative flex flex-row gap-4 items-start lg:after:content-[''] lg:after:absolute lg:after:right-0 after:top-1/2 lg:after:-translate-y-1/2 lg:after:h-20 lg:after:w-0.5 lg:after:bg-turquoise/25">
-              <BuildingComplex className="shrink-0 text-turquoise" size={48} />
+      <section className="mt-24 lg:mt-0 overflow-hidden">
+        <div className="bg-ice-blue/50 px-4 py-12 md:p-0">
+          <article className="grid gap-4 lg:gap-0 md:grid-cols-3 md:p-4 lg:p-8 xl:p-12 max-w-7xl mx-auto">
+            <div className="md:px-4 lg:px-8 relative flex flex-col lg:flex-row gap-4 items-start md:after:content-[''] md:after:absolute md:after:right-0 md:after:top-1/2 md:after:-translate-y-1/2 md:after:h-20 md:after:w-0.5 md:after:bg-turquoise/25">
+              <BuildingComplex
+                className="shrink-0 text-turquoise h-8 w-8 lg:h-12 lg:w-12"
+                strokeWidth={1.5}
+              />
               <div>
                 <h2 className="!font-bold">Referenz A</h2>
                 <p className="text-sm">Kurze Info zu Firma A & Erfolg</p>
               </div>
             </div>
-            <div className="px-8 relative flex flex-row gap-4 items-start lg:after:content-[''] lg:after:absolute lg:after:right-0 after:top-1/2 lg:after:-translate-y-1/2 lg:after:h-20 lg:after:w-0.5 lg:after:bg-turquoise/25">
-              <BuildingComplex className="shrink-0 text-turquoise" size={48} />
+            <div className="md:px-4 lg:px-8 relative flex flex-col lg:flex-row gap-4 items-start md:after:content-[''] md:after:absolute md:after:right-0 md:after:top-1/2 md:after:-translate-y-1/2 md:after:h-20 md:after:w-0.5 md:after:bg-turquoise/25">
+              <BuildingComplex
+                className="shrink-0 text-turquoise h-8 w-8 lg:h-12 lg:w-12"
+                strokeWidth={1.5}
+              />
               <div>
                 <h2 className="!font-bold">Referenz B</h2>
                 <p className="text-sm">Kurze Info zu Firma B & Erfolg</p>
               </div>
             </div>
-            <div className="px-8 relative flex flex-row gap-4 items-start">
-              <BuildingComplex className="shrink-0 text-turquoise" size={48} />
+            <div className="md:px-4 lg:px-8 relative flex flex-col lg:flex-row gap-4 items-start">
+              <BuildingComplex
+                className="shrink-0 text-turquoise h-8 w-8 lg:h-12 lg:w-12"
+                strokeWidth={1.5}
+              />
               <div>
                 <h2 className="!font-bold">Referenz C</h2>
                 <p className="text-sm">Kurze Info zu Firma C & Erfolg</p>
@@ -39,7 +48,7 @@ export default function Home() {
             </div>
           </article>
         </div>
-        <div className="relative overflow-hidden flex items-center px-4 md:px-16 lg:px-32 py-12 lg:py-32">
+        <div className="relative overflow-hidden flex flex-col lg:flex-row gap-24 lg:gap-8 xl:gap-0 items-center px-4 md:px-16 xl:px-32 py-12 lg:py-32">
           {/* leave */}
           <span className="absolute h-160 w-160 text-turquoise/20 rotate-45 -left-80 -z-[10]">
             <svg
@@ -53,7 +62,7 @@ export default function Home() {
           {/* circles */}
           <span className="absolute bg-turquoise/10 h-140 w-140 rounded-full -bottom-80 -right-120 -z-[10]"></span>
           <span className="absolute bg-turquoise/30 h-160 w-160 rounded-full -bottom-148 -right-60"></span>
-          <div className="flex-1 relative">
+          <div className="pt-12 lg:pt-0 flex-1 relative">
             <div className="relative w-fit overflow-hidden rounded-3xl">
               <Image
                 src={"/images/stock_office.jpg"}
@@ -67,7 +76,7 @@ export default function Home() {
               <span className="absolute bg-turquoise/50 h-80 w-80 rounded-full -right-48 -bottom-60"></span>
             </div>
           </div>
-          <article className="flex-1">
+          <article className="flex-1 pb-12 lg:py-0">
             <h3 className="!text-darkturquoise uppercase !font-semibold !tracking-wide">
               Meine Leistungen
             </h3>
@@ -100,8 +109,8 @@ export default function Home() {
             </div>
           </article>
         </div>
-        <div className="bg-marine-blue">
-          <article className="grid grid-cols-4 text-off-white p-8 xl:p-12 max-w-7xl mx-auto">
+        <div className="bg-marine-blue py-12 lg:py-0">
+          <article className="grid gap-8 lg:gap-0 md:grid-cols-2 lg:grid-cols-4 text-off-white p-8 xl:p-12 max-w-7xl mx-auto">
             <div className="text-center px-8 relative flex flex-col gap-2 items-center lg:after:content-[''] lg:after:absolute lg:after:right-0 after:top-1/2 lg:after:-translate-y-1/2 lg:after:h-20 lg:after:w-0.5 lg:after:bg-off-white/50">
               <Goal className="shrink-0" size={32} />
               <h2 className="!mb-0 !leading-none">+100</h2>
