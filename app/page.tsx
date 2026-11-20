@@ -6,8 +6,10 @@ import {
   Check,
   Gem,
   Goal,
+  Quote,
   UserRoundCheck,
 } from "lucide-react";
+import AboutBtn from "./components/btn/AboutBtn";
 
 export default function Home() {
   return (
@@ -138,7 +140,43 @@ export default function Home() {
           </article>
         </div>
       </section>
-      <section className="px-4 md:px-16 lg:px-32 pt-12 md:pt-16 lg:pt-32 "></section>
+       <section className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-16 px-4 md:px-8 lg:px-32 py-24 lg:py-32 relative overflow-hidden">
+       
+                   {/* circles */}
+          <span className="absolute bg-turquoise/10 h-140 w-140 rounded-full -bottom-80 -right-100 -z-[10]"></span>
+          <span className="absolute bg-turquoise/30 h-160 w-160 rounded-full -bottom-140 -right-60"></span>
+          <article className="pb-12 lg:py-0 flex flex-col gap-4">
+            <h3 className="!text-darkturquoise uppercase !font-semibold !tracking-wide">
+              ÜBER MICH
+            </h3>
+            <h1 className="max-w-lg">
+              Marketing-Expertise mit persönlichem Ansatz
+            </h1>
+            <p className="max-w-xl">
+              Ich bin Jessica Feneberg - Performance Marketing Consultant mit
+              Leidenschaft für messbare Ergebnisse, smarte Strategien und
+              partnerschaftliche Zusammenarbeit.
+            </p>
+            <AboutBtn hasArrow={true} className="mt-8" />
+          </article>
+          <div className="">
+            <div className="relative bg-ice-blue rounded-3xl p-8 lg:p-16 max-w-lg">
+              <Quote
+                className="absolute top-4 left-4  lg:top-8 lg:left-8 text-darkturquoise fill-darkturquoise w-4 h-4 lg:w-8 lg:h-8"
+                strokeWidth={0.1}
+              />
+
+              <p className="text-lg italic">
+                „Mein Ziel: Marketing, das nicht nur gut aussieht, sondern
+                spürbar zum Wachstum beiträgt."
+              </p>
+              <p className="text-3xl font-signature text-end pt-4">
+                Jessica Feneberg
+              </p>
+            </div>
+          </div>
+    
+      </section>
     </div>
   );
 }

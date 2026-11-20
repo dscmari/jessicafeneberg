@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Great_Vibes } from "next/font/google";
 import "./globals.css";
 
 
 import Navbar from "./components/navbar/Navbar";
 import ScrollToTopBtn from "./components/btn/ScrollToTopBtn";
+import Footer from "./components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+});
+
+const signature = Great_Vibes({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-signature",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <GTMHeadScript/>
       </head> */}
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${inter.variable} ${signature.variable} antialiased`}
       >
         {/* <GTMBodyScript/> */}
     
@@ -32,8 +40,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {/* <BreadcrumbsJsonLd /> */}
           {children}
         </main>
-        {/* <PreFooter />
-        <Footer /> */}
+   
+        <Footer />
         <ScrollToTopBtn />
       </body>
     </html>

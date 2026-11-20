@@ -11,7 +11,7 @@ export default function ContactBtn({ className, content }: Props) {
   return (
     <Link
       href={"/kontakt/"}
-      className={`max-w-68 flex justify-center gap-2 bg-darkturquoise rounded-3xl text-white py-2 px-4 hover:shadow-xl font-semibold tracking-wide hover:bg-[#066575] ${className}`}
+      className={`max-w-72 flex justify-center gap-2 bg-darkturquoise rounded-3xl text-white py-4 px-6 hover:shadow-xl font-semibold tracking-wide hover:bg-[#066575] ${className}`}
     >
       <span>{content ? content : "Erstgespräch vereinbaren"}</span>
       {/* <ArrowRight className="shrink-0"/> */}

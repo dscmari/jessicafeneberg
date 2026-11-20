@@ -9,8 +9,7 @@
   --color-cta: #3730a3;
   /* --color-darkmodeblue: #102a43; */
   --font-inter: var(--font-inter);
-  --font-geistsans: var(--font-geist-sans);
-  --font-geistmono: var(--font-geist-mono);
+  --font-signature: var(--font-signature), cursive;
   --breakpoint-3xl: 120rem;
 }
 
